@@ -1,0 +1,357 @@
+﻿
+* { margin:0;padding:0;}
+
+body
+{	margin:0;
+	padding:0;
+    height: 700px;
+   	text-align: left !important;
+}
+.infotext
+{
+    margin-left: 20px;
+    bottom: -20px;
+    color: White;
+    font-family: 'Iceland' , cursive;
+    font-size: 19px;
+    position: relative;
+}
+a
+{
+    margin: 0;
+}
+.cl
+{
+    clear: both;
+	height:50px;
+}
+/* menu and logo div */
+.header
+{
+    margin: 0 auto;
+    margin-bottom: 80px;
+    width: 1000px;
+    height: 70px; /*  background: url('header.png') repeat-x scroll;*/
+}
+
+/* logo section */
+.logo
+{
+    height: 100px;
+    float: left;
+    }
+ .logo:hover {cursor:pointer;}
+/* menu section */
+.navigation
+{
+	float:right;
+    margin-left:30px;
+	float:left;
+    position: relative;
+    height: 100px;
+   /* border-radius: 50px 50px 0px 0px;  background:  url('images/bg_header.png') repeat-x scroll; 	behavior: url(ie-css3.htc);*/
+}
+.menu
+{
+	box-shadow: 1px 1px 6px #000;
+    position: relative;
+    padding-left: 0;
+    top: 20px;
+    height: 40px;
+   -webkit-padding-start: 0px; /*background: url('images/globalnav.png') repeat-x 0 -41px;*/
+    background: url('images/nav7.png') repeat-x scroll;
+    border-radius: 50px 50px 50px 50px; /*box-shadow: 1px 1px 50px #000;*/
+}
+.menu li
+{
+    background: url('images/navigation_s.png') no-repeat right;
+    float: left;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    list-style-type: none; /*box-shadow: 1px 1px 10px #000;*/
+    behavior: url(ie-css3.htc);
+}
+.menu li:hover
+{
+    background: url('images/nav_hover1.png') repeat-x;
+    cursor: pointer;
+}
+.firstmenu
+{
+    border-radius: 50px 0 0 50px;
+}
+.firstmenu li
+{
+    background: none !important;
+}
+.firstmenu li:hover
+{
+    border-radius: 0 50px 50px 0;
+    background: url('images/nav_hover1.png') repeat-x;
+}
+
+#lastmenu
+{
+    background: none;
+    border-radius: 0 50px 50px 0;
+    
+}
+#lastmenu:hover
+{
+    border-radius: 0 50px 50px 0;
+    background: url('images/nav_hover1.png') repeat-x !important;
+    margin-left: 0px;
+    margin-right: 0px !important;
+    
+}
+
+.menu li a
+{
+    position: relative;
+    color: #F8F8F8;
+    font-family: 'Iceland' , cursive;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    top: 10px;
+}
+.menu li a:visited
+{
+    color: #F8F8F8;
+}
+.menu li a:hover
+{
+    color: #F8F8F8;
+}
+/* end menu section */
+
+/* body section */
+.bodyContent
+{
+    margin: 0 auto;
+    margin-top: 35px;
+    width: 1000px;
+    height: 500px;
+    border-radius: 51px 0px 51px 0px; /*background:  url('images/body.png') repeat-x scroll;}*/
+    background-color: #D8D8D8;
+    box-shadow: 1px 1px 10px #444444;
+    behavior: url(ie-css3.htc);
+}
+.container
+{
+    position: relative;
+    margin: 0 auto;
+    top: 50px;
+    background-color: white;
+    width: 900px;
+    height: 400px;
+}
+/* logo section */
+
+/* transparent efect for cyrcle images section  */
+.shadow
+{
+    position: absolute;
+    z-index: 12;
+    width: 620px;
+    height: 50px;
+    opacity: 0.5;
+    bottom: 0px;
+    background-color: Black;
+}
+/* transparent efect for litle images section  */
+.ltlShadow
+{
+    position: absolute;
+    z-index: 12;
+    width: 278px;
+    height: 23px;
+    opacity: 0.3;
+    margin-top: 109px;
+    background-color: Black;
+}
+/* text from transparent efect  section  */
+.inShadow
+{
+    position: absolute;
+    z-index: 155;
+    width: 280px;
+    height: 25px;
+    margin-top: 110px;
+}
+
+.inShadow:hover
+{
+    color: Red !important;
+}
+
+#litlenav
+{
+    position: absolute;
+    z-index: 13;
+    width: 620px;
+    bottom: 10px;
+	left:540px;
+}
+
+/* big sliders */
+.sliders
+{
+    height: 500px;
+    width: 600px;
+    behavior: url(ie-css3.htc);
+}
+
+
+/* left containers section  */
+.leftcontainer
+{
+    width: 280px;
+    height: 400px;
+    float: right;
+    margin-top: -500px;
+    margin-right: 0px;
+	
+}
+.leftcontainer a {text-decoration:none !important;color:White;}
+#firstcont
+{
+    color: White;
+    font-family: 'Iceland' , cursive;
+    font-weight: bold;
+    font-size: 19px;
+    position: relative;
+    height: 131px;
+}
+#secondcont
+{
+    color: White;
+    font-family: 'Iceland' , cursive;
+    font-weight: bold;
+    font-size: 19px;
+    position: relative;
+    height: 131px;
+}
+#thirdcont
+{
+    color: White;
+    font-family: 'Iceland' , cursive;
+    font-weight: bold;
+    font-size: 19px;
+    position: relative;
+    height: 132px;
+}
+
+#firstcont:hover
+{
+    cursor: pointer;
+    border: solid 1px Red !important;
+    color: #f !important;
+}
+#secondcont:hover
+{
+    cursor: pointer;
+    border: solid 1px Red !important;
+    color: #f !important;
+}
+#thirdcont:hover
+{
+    cursor: pointer;
+    border: solid 1px Red !important;
+    color: #f !important;
+}
+/*end left containers section  */
+
+/* footer containers section  */
+.footer
+{
+	position:relative;
+    z-index: 100;
+    width: 100%;
+    background:#000 url('images/nav9.png') repeat-x scroll;
+    bottom: 0px !important;
+   	box-shadow: 1px 1px 30px #000;
+}
+.footermenu
+{
+    position: relative;
+	top: 16px;
+	
+}
+
+.footermenu li
+{
+    top: -16px;
+    position: relative;
+    float: left;
+    height: 40px;
+    padding-left: 20px;
+    list-style-type: none;
+    background: url('images/navigation_t.png') no-repeat right top;
+}
+.footermenu li:hover
+{
+    background: url('images/nav_hover1.png') repeat-x;
+	  cursor: pointer;
+}
+.footermenu li a
+{
+    position: relative;
+    color: White;
+    font-family: 'Iceland' , cursive;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+    top: 10px;
+}
+.footermenu li a:hover
+{
+    color: #F8F8F8;
+}
+.infooter
+{
+    position: relative;
+    margin-top: -20px;
+    width: 600px;
+    margin: 0 auto;
+}
+.footer_x:hover
+{
+    background: none !important;
+}
+/* end footer containers section  */
+
+#leftmenu {margin-top:30px;font-family: 'Iceland' , cursive;font-weight:Bold;font-size: 17px;width:auto;height:auto;margin-bottom:10px;}
+#leftmenu  li  {box-shadow: 1px 1px 10px #000; margin:0 auto;height:30px;background: url('images/nav8.png')  repeat-x scroll;  border-radius: 50px 50px 50px 50px;margin-bottom:5px;}
+#leftmenu  li:hover { margin:0 auto;height:30px; background: url('images/nav_hover2.png') repeat-x scroll; cursor: pointer;  border-radius: 50px 50px 50px 50px;margin-bottom:5px;}
+#leftmenu  li  .level1{ margin-top:15px;margin-left:20px;height:30px;background: url('images/nav8.png')  repeat-x scroll;  border-radius: 50px 50px 50px 50px;margin-bottom:5px;}
+#leftmenu  li .level1:hover { margin-top:15px;margin-left:20px;height:30px;height:30px; background: url('images/nav_hover2.png') repeat-x scroll; cursor: pointer;  border-radius: 50px 50px 50px 50px;margin-bottom:3px;}
+#leftmenu  li  a{margin-top:1px;text-decoration:none;text-align:center;color:#F8F8F8;margin-left:55px;}
+#leftmenu  li  a span {position:relative;top:5px;}
+button.button span { display:block; height:19px;border-radius: 20px 20px 20px 20px; padding:0 8px; font:bold 12px/19px Arial, Helvetica, sans-serif; text-align:center; white-space:nowrap; color:#fff; }
+button.button span span:hover{color:#A8A8A8;}
+.block .block-title { background:url(images/block-head.png) 0 0 repeat-x #000; border-bottom:1px solid #ddd;border-radius:10px 0 0 0; padding:2px 9px; }
+#leftmenu  li.level0  ul.level0  {margin-top:25px;margin-bottom:300px;}
+.block-subscribe {top: 250px;position: relative;border:1px Solid #A8A8A8;}
+ul.level0  li.level1 a {margin-left:25px !important;}
+.block-cart {border:1px Solid #A8A8A8;}
+.product-colections {display:block;margin:5px 5px 35px 5px ;border:1px Solid #A8A8A8;height:150px;border-radius:10px;overflow:hidden;box-shadow:3px 3px 5px #000000; }
+.product-colections a{text-decoration:none;color:#000;text-align:center;}
+#products_slider  { overflow: hidden;}
+#ColectionsImage {margin-left:50px;margin-bottom:20px;width:472px;height:320px;border:1px Solid #A8A8A8;overflow: hidden;border-radius: 10px;box-shadow: 3px 3px 5px #000;}
+#ColectionsImage  img {width:472px;height:320px;}
+#products_slider  #slider_container div{background-color:white;}
+#myaccountmain {width:780px;}
+.dashboard{background-color:#fff;border-radius: 10px 10px 10px 10px;box-shadow: 0px 0px 8px #000;}
+.hello {}
+.dashcontent {margin:20px;float:none !important;}
+.dashcontent .col2-set .col-1 {float:none !important;width:auto !important;padding-bottom:15px;}
+.dashcontent .col2-set  .col-2 {margin-left:0 !important;width:auto !important;}
+.my-wishlist .title-buttons   h1{text-align:center !important;margin-left:300px;}
+#fancybox-overlay {background-color:#000 !important;}
+.view-mode .list {color:White;}
+.view-mode .list:hover {color:Red;}
+.product-image #image {margin-left:100px;}
+.shipping {}

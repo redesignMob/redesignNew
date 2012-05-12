@@ -1,0 +1,111 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+$product = Mage::getModel('catalog/product')->getCollection()
+                ->addFieldToFilter('entity_id',Mage::app()->getRequest()->getParam('id'))
+                ->addAttributeToSelect('*');
+$materials = $product->getFirstItem()->getMaterials();
+$materials = !empty($materials) ? Zend_Json::decode($materials) : $materials;
+?>
+
+<div class="entry-edit">
+    <div class="entry-edit-head">
+        <h4 class="icon-head head-edit-form fieldset-legend">Materiale utilizate</h4>
+    </div>
+    <div id="group_fields44" class="fieldset fieldset-wide">
+        <div class="hor-scroll">
+            <table id="materials_table" cellspacing="0" cellpadding="0" class="border">
+                <input type="hidden" value="" name="validation_1_result" class="required-option-select-type-rows">
+                <thead>
+                    <tr class="headings">
+                        <th class="type-title">Material <span class="required">*</span></th>
+                        <th class="type-sku">Cantitate</th>
+                        <th class="type-butt last">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody id="select_option_type_row_1">
+                    <?php if(!empty($materials)): ?>
+                        <?php foreach($materials['material_id'] as $key=>$material_id): ?>
+                            <tr class="materials_row" <?php echo $key == 0 ? 'id="row_protoype"' : ''?>>
+                                <td>
+                                    <select title="" class="select product-option-price-type" id="" name="product[material][material_id][]">
+                                        <?php foreach($this->getMaterials() as $material): ?>
+                                            <option <?php echo $material_id == $material->getId() ? 'selected="selected"' : '' ?> value="<?php echo $material->getId() ?>"><?php echo $material->getTitle() ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" value="<?php echo $materials['material_qty'][$key] ?>" name="product[material][material_qty][]" id="" class="input-text validate-number product-option-price">
+                                </td>
+                                <td class="last">
+                                    <span title="Delete row">
+                                        <button style="" onclick="" class="scalable delete delete-material-row delete-select-row icon-btn" type="button" id="delete_select_row_button">
+                                            <span>Delete Row</span>
+                                        </button>
+                                    </span>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                   <?php else : ?>
+                           <tr class="materials_row" id="id="row_protoype">
+                                <td>
+                                    <select title="" class="select product-option-price-type" id="" name="product[material][material_id][]">
+                                        <?php foreach($this->getMaterials() as $material): ?>
+                                            <option value="<?php echo $material->getId() ?>"><?php echo $material->getTitle() ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" name="product[material][material_qty][]" id="" class="input-text validate-number product-option-price">
+                                </td>
+                                <td class="last">
+                                    <span title="Delete row">
+                                        <button style="" onclick="" class="scalable delete delete-material-row delete-select-row icon-btn" type="button" id="delete_select_row_button">
+                                            <span>Delete Row</span>
+                                        </button>
+                                    </span>
+                                </td>
+                            </tr>
+                    <?php endif; ?>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="a-right" colspan="100">
+                            <button style="" onclick="" class="scalable add add-material-row add-select-row" type="button" id="add_select_row_button_1">
+                                <span>Add New Row</span>
+                            </button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        var id = 0;
+
+        // Add button functionality
+        jQuery("table#materials_table button.add-material-row").click(function() {
+            id++;
+            var master = jQuery(this).parents("table#materials_table");
+
+            // Get a new row based on the prototype row
+            var prot = master.find("#row_protoype").clone();
+            prot.attr("id", "");
+            prot.find(".id").attr("value", id);
+            prot.find('input[type=text]').val('');
+            master.find("tbody").append(prot);
+        });
+
+        // Remove button functionality
+        jQuery("table#materials_table button.delete-material-row").live("click", function() {
+            jQuery(this).parents("tr").remove();
+        });
+    });
+</script>

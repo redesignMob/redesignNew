@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <quickorder_index_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="quickorder/products" name="quickorder_products" as="quickorder_products" template="quickorder/quickorder.phtml">
+                <block type="checkout/cart_sidebar" name="quickorder_cart_sidebar" as="quickorder_cart_sidebar" template="checkout/cart/sidebar.phtml" before="-">
+                    <action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                    <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                    <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                    <block type="core/text_list" name="cart_sidebar.extra_actions" as="extra_actions" translate="label" module="checkout">
+                        <label>Shopping Cart Sidebar Extra Actions</label>
+                    </block>
+                </block>
+            </block>
+        </reference>
+        <reference name="quickorder_sidebar_cart">
+            
+        </reference>
+    </quickorder_index_index>
+    <quickorder_index_getcart>
+        <block type="checkout/cart_sidebar" name="quickorder_cart_sidebar" as="quickorder_cart_sidebar" template="checkout/cart/sidebar.phtml" output="toHtml">
+            <action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>checkout/cart/sidebar/default.phtml</template></action>
+            <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/cart/sidebar/default.phtml</template></action>
+            <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/cart/sidebar/default.phtml</template></action>
+            <block type="core/text_list" name="cart_sidebar.extra_actions" as="extra_actions" translate="label" module="checkout">
+                <label>Shopping Cart Sidebar Extra Actions</label>
+            </block>
+        </block>
+    </quickorder_index_getcart>
+</layout>

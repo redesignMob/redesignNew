@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Redesign_ConfigurableProduct>
+            <version>1.0.0</version>
+        </Redesign_ConfigurableProduct>
+    </modules>
+    <frontend>
+        <routers>
+            <configurable>
+                <use>standard</use>
+                <args>
+                    <module>Redesign_ConfigurableProduct</module>
+                    <frontName>configurable</frontName>
+                </args>
+            </configurable>
+        </routers>
+    </frontend>
+</config>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <label_adminhtml_label_index>
+        <reference name="content">
+            <block type="label/adminhtml_label" name="label" />
+        </reference>
+    </label_adminhtml_label_index>
+</layout>

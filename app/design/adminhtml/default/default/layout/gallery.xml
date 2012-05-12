@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+
+	<default>
+		<reference name="head">
+	            <action method="setCanLoadExtJs"><flag>1</flag></action>
+	    </reference>
+	</default>
+
+    <gallery_adminhtml_gallery_index>
+	    <reference name="left">
+        	<block type="gallery/adminhtml_tree" name="gallery.category.tree" template="gallery/tree.phtml"/>
+        </reference>        
+        <reference name="content">
+            <block type="gallery/adminhtml_gallery" name="gallery" />
+        </reference>
+    </gallery_adminhtml_gallery_index>
+    
+    <gallery_adminhtml_gallery_edit>
+	    <reference name="left">
+        	<block type="gallery/adminhtml_tree" name="gallery.category.tree" template="gallery/tree.phtml"/>
+        </reference>         
+		<reference name="content">
+			
+			
+			<block type="gallery/adminhtml_gallery_edit" name="gallery.gallery.edit">	
+				<block type="gallery/adminhtml_gallery_edit_tabs" name="gallery_edit_tabs"/>
+			</block>
+			
+		</reference>
+    </gallery_adminhtml_gallery_edit>
+
+</layout>

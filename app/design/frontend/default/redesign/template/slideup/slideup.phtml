@@ -1,0 +1,57 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+$products = $this->getProducts();
+
+?>
+
+<div id="products_slider" >
+    <div id="slider_container" style="position: relative; width:190px;height:685px; ">
+        <?php foreach($products as $_product) : ?>
+            <div style="margin:10px 10px;height:135px;width:172px;border:1px Solid #A8A8A8;border-radius:10px;overflow:hidden;box-shadow:3px 3px 5px #000;" title="<?php echo $_product->getName() ?>">
+                <a href="<?php echo $this->getBaseUrl() . $_product->getUrlPath() ?>">
+                    <img style="overflow:hidden;" src="<?php echo Mage::helper('catalog/image')->init($_product, 'small_image')->resize(120); ?>" width="170" height="120" />
+                </a>
+             </div>
+			 <p style="margin:0;padding:0;font-size:13px;text-align:center;font-weight:bold;cursor:pointer;" title="<?php echo $_product->getName() ?>"><?php echo $_product->getName() ?></p>
+        <?php endforeach; ?>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $j(document).ready(function(){
+        var stashed = null;
+        var stashed1= null;
+        // Recursive next image function
+        var nextImage = function() {
+
+            // Add next image
+            $j("#slider_container").append(stashed);
+			$j("#slider_container").append(stashed1);
+            // Animate the slider
+            $j("#slider_container").animate({
+                top: '-=175'
+            }, 2000, function() {
+
+                // Remove image to the left
+                stashed = $j("#slider_container div:first");
+				stashed1 = $j("#slider_container p:first");
+                $j("#slider_container div:first").remove();
+				$j("#slider_container p:first").remove();
+
+                // Reset CSS
+                $j("#slider_container").css("top", "0px");
+                
+                setTimeout(function() { nextImage(); }, 3500);    
+            });  
+        }
+
+        // Call next image for the first time
+        setTimeout(function() { nextImage(); }, 2000);       
+        });
+</script>

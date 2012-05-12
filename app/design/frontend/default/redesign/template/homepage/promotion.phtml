@@ -1,0 +1,54 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+$promotions = $this->getPromotionList();
+$products = array();
+foreach($promotions as $product) {
+    $products[] = $product;
+}
+?>
+
+<?php if(isset($products[0])): ?>
+    <?php $_product = Mage::getModel('catalog/product')->load($products[0]->getId()); ?>
+    <div id="firstcont" style="float: right;border:solid 1px #A8A8A8;">
+        <div class="ltlShadow">
+        </div>
+        <a href="<?php echo $_product->getUrlPath() ?>">
+            <div class="inShadow">
+            &nbsp; &nbsp;  <?php echo $_product->getName() ?>
+            </div>
+            <img src="<?php echo Mage::helper('catalog/image')->init($_product, 'promotion_image')->resize(275, 183); ?>" width="278" height="130" />
+        </a>
+    </div>
+<?php endif; ?>
+
+<?php if(isset($products[1])): ?>
+    <?php $_product = Mage::getModel('catalog/product')->load($products[1]->getId()); ?>
+    <div id="secondcont" style="float: right;border:solid 1px #A8A8A8;">
+        <div class="ltlShadow">
+        </div>
+        <a href="<?php echo $_product->getUrlPath() ?>">
+            <div class="inShadow">
+            &nbsp; &nbsp; <?php echo $_product->getName() ?>
+            </div>
+            <img src="<?php echo Mage::helper('catalog/image')->init($_product, 'promotion_image')->resize(275, 183); ?>" width="278" height="130" />
+        </a>
+    </div>
+<?php endif; ?>
+
+<?php if(isset($products[2])): ?>
+    <?php $_product = Mage::getModel('catalog/product')->load($products[2]->getId()); ?>
+    <div id="thirdcont" style="float: right;border:solid 1px #A8A8A8;">
+        <div class="ltlShadow">
+        </div>
+        <a href="<?php echo $_product->getUrlPath() ?>">
+            <div class="inShadow">
+                &nbsp; &nbsp; <?php echo $_product->getName() ?>
+            </div>
+            <img src="<?php echo Mage::helper('catalog/image')->init($_product, 'promotion_image')->resize(275, 183); ?>" width="278" height="130" />
+        </a>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,85 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+$categories = $this->getMainCategories();
+?>
+
+<?php if(count($categories)): ?>
+    <div style="float: left;position: relative;width: 600px;border: 1px solid;padding: 20px" class="quickorder_main_categories">
+        <?php foreach($categories as $category): ?>
+            <div>
+                <a id="category_link_<?php echo $category->getId() ?>" onclick="getChildrenCategories('<?php echo $category->getId() ?>')" style="cursor:pointer"><img id="img_toggle_<?php echo $category->getId() ?>" src="<?php echo $this->getSkinUrl() ?>images/plus.gif" /></a>
+                <?php echo $category->getName() ?>
+                <img style="display:none" id="ajax_loader_<?php echo $category->getId() ?>" src="<?php echo $this->getSkinUrl() ?>images/i_ajax_loader.gif" />
+            </div>
+            <div style="display:none;margin:20px" id="children_categories_<?php echo $category->getId() ?>"></div>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>
+
+<div id="quickorder_cart_sidebar" style="float:right;position:relative;margin-right: 20px">
+    <?php echo $this->getChildHtml('quickorder_cart_sidebar') ?>
+</div>
+<div style="clear: both"></div>
+
+
+<script type="text/javascript">
+    var _base_url = '<?php echo $this->getBaseUrl() ?>';
+    
+    function getChildrenCategories(category_id) {
+        $j('#ajax_loader_' + category_id).show();
+        $j.ajax({
+            url: _base_url + "quickorder/index/children/id/" + category_id,
+            success: function(response){
+                $j('#children_categories_' + category_id).html(response);
+                $j('#children_categories_' + category_id).show();
+                $j('#ajax_loader_' + category_id).hide();
+                $j('#img_toggle_' + category_id).attr('src', "<?php echo $this->getSkinUrl() ?>images/minus.gif");
+                $j('#category_link_' + category_id).attr('onclick','closeCategory(\'' + category_id + '\')');
+            }
+        });
+    }
+    
+    function closeCategory(category_id) {
+        $j('#children_categories_' + category_id).hide();
+        $j('#children_categories_' + category_id).html();
+        $j('#img_toggle_' + category_id).attr('src', "<?php echo $this->getSkinUrl() ?>images/plus.gif");
+        $j('#category_link_' + category_id).attr('onclick','getChildrenCategories(\'' + category_id + '\')');
+    }
+    
+    function addProductToCart(product_id) {
+        $j('#product_ajax_loader_' + product_id).show();
+        var add_to_cart_url = _base_url + "quickorder/index/add?product=" + product_id;
+        var product_type = $j('#product_type_'+product_id).val();
+        
+        if(product_type == 'configurable') {
+            sel_option = $j("div#product_options_"+product_id+" input[type='radio']:checked").val();
+            if(sel_option != undefined) {
+                option_parts = sel_option.split('_');
+                add_to_cart_url += '&qty=1&super_attribute['+option_parts[0]+']='+option_parts[1]; 
+            }
+        }
+        
+        $j.ajax({
+            url: add_to_cart_url,
+            success: function(response){
+                $j('#product_ajax_loader_' + product_id).hide();
+                if (response != "success"){
+                    alert("Eroare la adaugare in cos : \n " + response);
+                    return;
+                }
+                alert("Produsul a fost adaugat in cos cu succes !");
+                $j.ajax({
+                    url:  _base_url + "quickorder/index/getcart",
+                    dataType: 'html',
+                    success: function(response){
+                        $j('#quickorder_cart_sidebar').html(response);
+                    }
+                });
+            }
+        });
+    }
+</script>

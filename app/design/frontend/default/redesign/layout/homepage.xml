@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <default>
+         <reference name="main.menu">
+            <block type="cms/block" name="main-menu-block">
+                <action method="setBlockId"><block_id>top-menu-homepage</block_id></action>
+            </block>
+        </reference>
+        <reference name="footer.menu">
+            <block type="cms/block" name="footer-menu-block">
+                <action method="setBlockId"><block_id>footer-menu</block_id></action>
+            </block>
+        </reference>
+    </default>
+    
+    <cms_index_index>
+        <reference name="content">
+            <action method="unsetChildren" />
+            <block type="homepage/slider" name="home_slider" as="home_slider" template="homepage/slider.phtml" />
+        </reference>
+        <reference name="right">
+            <action method="unsetChildren" />
+            <block type="homepage/promotion" name="home_promotion" as="home_promotion" template="homepage/promotion.phtml" />
+        </reference>
+    </cms_index_index>
+</layout>

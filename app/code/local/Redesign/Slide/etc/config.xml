@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Redesign_Slide>
+            <version>1.0.0</version>
+        </Redesign_Slide>
+    </modules>
+    <global>
+        <blocks>
+            <slide>
+                <class>Redesign_Slide_Block</class>
+            </slide>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <slide>
+                    <file>slide.xml</file>
+                </slide>
+            </updates>
+        </layout>
+    </frontend>
+</config>

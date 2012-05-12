@@ -1,0 +1,35 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+$products = $this->getQuickorderData();
+?>
+
+<?php if(count($products)): ?>
+    <?php foreach($products as $product): ?>
+        <div>
+            <span><?php echo $product->getSku() ?> - <?php echo $product->getName() ?></span>
+            <img src="<?php echo Mage::helper('catalog/image')->init($product, 'thumbnail')->resize(20) ?>" />
+            <a title="Adauga in cos" alt="Adauga in cos" style="cursor:pointer" onclick="addProductToCart('<?php echo $product->getId() ?>')"><img title="Adauga in cos" alt="Adauga in cos" id="add_to_cart_<?php echo $product->getId() ?>" src="<?php echo $this->getSkinUrl() ?>/images/icon_add2cart.gif" /></a>
+            <img style="display:none" id="product_ajax_loader_<?php echo $product->getId() ?>" src="<?php echo $this->getSkinUrl() ?>images/i_ajax_loader.gif" />
+        </div>
+        <input type="hidden" id="product_type_<?php echo $product->getId() ?>" value="<?php echo $product->getTypeId() ?>" />
+        <?php if($product->getTypeId() == 'configurable') : ?>
+            <div id="product_options_<?php echo $product->getId() ?>">
+               <?php $_attributes = $product->getTypeInstance(true)->getConfigurableAttributes($product); ?>
+               <?php foreach($_attributes as $_attribute) : ?>
+                    <h3><?php echo $_attribute->getLabel(); ?></h3>
+                    <?php foreach($_attribute->getPrices() as $price) : ?>
+                        <label for="<?php echo $_attribute->getAttributeId() ?>_<?php echo $price['value_index']?>"><?php echo $price['store_label'] ?></label>
+                        <input type="radio" class="super_attribute_<?php echo $product->getId() ?>" name="super_attribute_<?php echo $product->getId() ?>" value="<?php echo $_attribute->getAttributeId() ?>_<?php echo $price['value_index']?>" id="<?php echo $_attribute->getAttributeId() ?>_<?php echo $price['value_index']?>" />
+                    <?php endforeach; ?>
+               <?php endforeach; ?>
+            </div>
+        <?php endif; ?> 
+    <?php endforeach; ?>
+<?php else: ?>
+    <i>Nu exista rezultate</i>
+<?php endif; ?>

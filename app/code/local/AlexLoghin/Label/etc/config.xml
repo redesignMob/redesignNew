@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @category   AlexLoghin
+ * @package    AlexLoghin_Label
+ * @author     ModuleCreator
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <AlexLoghin_Label>
+            <version>0.1.0</version>
+        </AlexLoghin_Label>
+    </modules>
+    <frontend>
+        <routers>
+            <label>
+                <use>standard</use>
+                <args>
+                    <module>AlexLoghin_Label</module>
+                    <frontName>label</frontName>
+                </args>
+            </label>
+        </routers>
+        <layout>
+            <updates>
+                <label>
+                    <file>label.xml</file>
+                </label>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+			<label>
+				<use>admin</use>
+				<args>
+					<module>AlexLoghin_Label</module>
+					<frontName>labelll</frontName>
+				</args>
+			</label>
+        </routers>
+    </admin>
+    <adminhtml>
+		<menu>
+			<label module="label">
+				<title>Cargus</title>
+				<sort_order>71</sort_order>               
+				<children>
+					<items module="label">
+						<title>Note de transport</title>
+						<sort_order>0</sort_order>
+						<action>label/adminhtml_label</action>
+					</items>
+				</children>
+			</label>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<AlexLoghin_Label>
+							<title>Label Module</title>
+							<sort_order>10</sort_order>
+						</AlexLoghin_Label>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<label>
+					<file>label.xml</file>
+				</label>
+			</updates>
+		</layout>
+    </adminhtml>   
+    <global>
+        <models>
+            <label>
+                <class>AlexLoghin_Label_Model</class>
+                <resourceModel>label_mysql4</resourceModel>
+            </label>
+            <label_mysql4>
+                <class>AlexLoghin_Label_Model_Mysql4</class>
+                <entities>
+                    <label>
+                        <table>label</table>
+                    </label>
+                </entities>
+            </label_mysql4>
+        </models>
+        <resources>
+            <label_setup>
+                <setup>
+                    <module>AlexLoghin_Label</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </label_setup>
+            <label_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </label_write>
+            <label_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </label_read>
+        </resources>
+        <blocks>
+            <label>
+                <class>AlexLoghin_Label_Block</class>
+            </label>
+        </blocks>
+        <helpers>
+            <label>
+                <class>AlexLoghin_Label_Helper</class>
+            </label>
+        </helpers>
+    </global>
+</config>

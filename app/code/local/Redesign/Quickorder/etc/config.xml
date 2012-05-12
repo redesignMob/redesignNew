@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Redesign_Quickorder>
+            <version>1.0.0</version>
+        </Redesign_Quickorder>
+    </modules>
+    <global>
+        <blocks>
+            <quickorder>
+                <class>Redesign_Quickorder_Block</class>
+            </quickorder>
+        </blocks>
+    </global>
+    <frontend>
+        <routers>
+            <quickorder>
+                <use>standard</use>
+                <args>
+                    <module>Redesign_Quickorder</module>
+                    <frontName>quickorder</frontName>
+                </args>
+            </quickorder>
+        </routers>
+        <layout>
+            <updates>
+                <quickorder>
+                    <file>quickorder.xml</file>
+                </quickorder>
+            </updates>
+        </layout>
+    </frontend>
+</config>

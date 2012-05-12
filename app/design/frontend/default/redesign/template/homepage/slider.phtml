@@ -1,0 +1,50 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+$slides = $this->getSliderItems();
+?>
+<div id="litlenav">
+    <?php foreach($slides as $index=>$slide): ?>
+        <a href="#"><img class="sliderElement" id="slide_pager_<?php echo $index+1; ?>" src="<?php echo $this->getSkinUrl() ?>images/grey_btn.png" width="20" height="20" /></a>
+    <?php endforeach; ?>
+</div>
+<div class="sliders">
+    <?php foreach($slides as $slide): ?>
+        <?php echo $slide; ?>
+    <?php endforeach; ?>
+</div>
+
+
+<script type="text/javascript">
+    $j(document).ready(function () {
+    var html ='<a href="#" class="activeSlide"><img width="20" height="20" src="images/red_btn.png" /></a>';
+    $j('.activeSlide').each(function(){replaceWith(html);});
+        $j('.sliders').cycle({ 
+            fx:     'fade', 
+            speed:  'slow', 
+            timeout: 7000,
+            pager:  '#litlenav', 
+            pagerAnchorBuilder: function(idx, slide) { 
+                // return selector string for existing anchor // #litlenav a:eq(' + idx + ')
+                return '#litlenav a:eq(' + idx + ')';
+                //return '<a href="#"><img src="<?php echo $this->getSkinUrl()?>images/grey_btn.png" width="20" height="20" /></a>'; 
+                //return $j('#litlenav .activeSlide').replaceWith('<a href="#" class="activeSlide"><img src="<?php echo $this->getSkinUrl()?>images/red_btn.png" width="20" height="20" /></a>');
+
+            },
+            before: function (curr, next, opts) {
+                $j('.sliderElement').each(function(){
+                        $j(this).attr('src','<?php echo $this->getSkinUrl() ?>images/grey_btn.png');
+                });
+
+                slide_id = next.id;
+                parts = slide_id.split('_');
+                slide_nr = parts[1];
+                $j('#slide_pager_'+slide_nr).attr('src','<?php echo $this->getSkinUrl() ?>images/red_btn.png');
+            }
+        });
+    });
+</script>

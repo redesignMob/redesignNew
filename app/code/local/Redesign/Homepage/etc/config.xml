@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Redesign_Homepage>
+            <version>1.0.0</version>
+        </Redesign_Homepage>
+    </modules>
+    <global>
+        <blocks>
+            <homepage>
+                <class>Redesign_Homepage_Block</class>
+            </homepage>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <homepage>
+                    <file>homepage.xml</file>
+                </homepage>
+            </updates>
+        </layout>
+    </frontend>
+</config>

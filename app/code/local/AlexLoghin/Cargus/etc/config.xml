@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <default>
+        <carriers>
+            <cargus>
+                    <active>1</active>
+                    <sallowspecific>0</sallowspecific>
+                    <model>cargus/carrier_cargus</model>
+                    <name>Cargus</name>
+                    <title>Cargus</title>
+                    <specificerrmsg>
+                        This shipping method is currently unavailable.
+                        If you would like to ship using this shipping
+                        method, please contact us.
+                    </specificerrmsg>
+                    <handling_type>F</handling_type>
+            </cargus>
+        </carriers>
+  </default>
+  <modules>
+        <AlexLoghin_Cargus>
+            <version>0.1.0</version>
+        </AlexLoghin_Cargus>
+  </modules>
+ 
+  <global>
+
+    <models>
+      <cargus>
+        <class>AlexLoghin_Cargus_Model</class>
+      </cargus>
+    </models>
+ 
+    <resources>
+      <cargus_setup>
+        <setup>
+          <module>AlexLoghin_Cargus</module>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+      </cargus_setup>
+    </resources>
+ 
+ </global>
+ 
+</config>

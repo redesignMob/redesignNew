@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <material_adminhtml_material_index>
+        <reference name="content">
+            <block type="material/adminhtml_material" name="material" />
+        </reference>
+    </material_adminhtml_material_index>
+    <adminhtml_catalog_product_edit>
+        <reference name="product_tabs">
+            <action method="addTab">
+                <name>materials_tab</name>
+                <block>material/adminhtml_catalog_product_tab</block>
+            </action>
+        </reference>
+    </adminhtml_catalog_product_edit>
+</layout>

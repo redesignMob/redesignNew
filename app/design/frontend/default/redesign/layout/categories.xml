@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="catalog.leftnav">
+            <action method="unsetChild"><alias>category_filter</alias></action>
+        </reference>
+    </default>
+</layout>

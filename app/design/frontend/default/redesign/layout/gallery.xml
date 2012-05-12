@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <gallery_index_index>
+    </gallery_index_index>
+    <gallery_album_view>
+    	<reference name="head">
+		<action method="addJs"><script>jquery/jquery-1.3.2.js</script></action>
+    		<action method="addJs"><script>jquery/jquery.galleriffic.js</script></action>
+    		<action method="addCss"><stylesheet>css/gallery.css</stylesheet></action>
+    	</reference>
+    	<reference name="root">    		
+    		<action method="setTemplate"><template>page/1column.phtml</template></action>
+    		<block type="gallery/gallery" name="breadcrumbs" template="gallery/breadcrumbs.phtml" />
+    	</reference>    
+    	<reference name="content">
+    		<block type="gallery/gallery" name="gallery" template="gallery/gallery.phtml" />
+    	</reference>
+    </gallery_album_view>
+</layout> 
