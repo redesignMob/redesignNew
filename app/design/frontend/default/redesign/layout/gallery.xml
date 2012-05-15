@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
     <default>
+	<reference name="head">
+		<action method="setForcedTitle"><title>Account Dashboard</title></action>
+	</reference>
     </default>
     <gallery_index_index>
     </gallery_index_index>

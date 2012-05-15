@@ -1,8 +1,12 @@
 .gallery_wrapper div#container {
 	overflow: hidden;
 }
+.footer{
+    position: absolute;
+}
 .gallery_wrapper div.content {
 	display: none;
+        padding-top:30px;
 	clear: both;
 }
 
@@ -27,9 +31,15 @@ div.controls a {
 }
 div.ss-controls {
 	float: left;
+        position:absolute;
+        margin-top:30px
 }
 div.nav-controls {
-	float: right;
+	float: left;
+        margin-left: 60px;
+}
+div.nav-controls a:hover {
+    color:#000;
 }
 
 div.slideshow-container,
@@ -41,7 +51,7 @@ div.slideshow a.advance-link {
 div.loader,
 div.slideshow a.advance-link,
 div.caption-container {
-	height: 502px; /* This should be set to be at least the height of the largest image in the slideshow with padding */	
+	height: 502px; /* This should be set to be at least the height of the largest image in the slideshow with padding */
 }
 
 div.slideshow-container {
@@ -79,6 +89,7 @@ div.slideshow a.advance-link:hover,
 div.slideshow a.advance-link:active,
 div.slideshow a.advance-link:visited {
 	text-decoration: none;
+        color:#FFF;
 }
 div.slideshow a.advance-link:focus {
 	outline: none;
@@ -102,12 +113,17 @@ span.image-caption {
 
 div.caption-container, span.image-caption {
 	width: 334px;
+        height:400px;
 }
 
 .gallery_wrapper div.caption {
 	padding: 0 12px;
 }
-
+.slideshow
+{
+    width:500px;
+    height:350px;
+}
 .gallery_wrapper div.image-title {
 	font-weight: bold;
 	font-size: 1.4em;
@@ -126,9 +142,7 @@ div.photo-index {
 	padding: 0 12px;
 }
 div.navigation-container {
-	float: left;
-	position: relative;
-	left: 50%;
+
 }
 .gallery_wrapper div.navigation {
 	float: left;
@@ -203,15 +217,26 @@ div.gallery-gutter {
 /** taken from black.css **/
 
 .gallery_wrapper a{
-	color: #f70;
+	color:#A8A8A8;
+}
+.gallery_wrapper a:hover{
+	color:#fff;
 }
 .gallery_wrapper h2 {
 	color: #ccc;
 }
+.gallery_wrapper  {
+
+}
 .gallery_wrapper .items {
-	background-color: #000;
+    margin:20px;
+}
+.gallery_wrapper .item {
+
+        background-image: url('../images/gallery_bg.png');
+        background-repeat: repeat-x;
         border-radius:20px;
-	border-color: #222;
+        box-shadow: 3px 3px 5px #A9A9A9;
 }
 
 div.caption-container {
@@ -232,13 +257,13 @@ div.photo-index {
 	color: #888;
 }
 div.navigation a.prev {
-	background-image: url(../images/gallery/prevPageArrowWhite.gif);
+	background-image: url('../images/gallery/prevPageArrowWhite.gif');
 }
 div.navigation a.next {
-	background-image: url(../images/gallery/nextPageArrowWhite.gif);
+	background-image: url('../images/gallery/nextPageArrowWhite.gif');
 }
 .gallery_wrapper div.loader {
-	background-image: url(../images/gallery/loaderWhite.gif);
+	background-image: url('../images/gallery/loaderWhite.gif');
 }
 div.slideshow img {
 	border-color: #333;

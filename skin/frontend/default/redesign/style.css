@@ -3,9 +3,9 @@
 
 body
 {	margin:0;
-	padding:0;
-    height: 700px;
-   	text-align: left !important;
+  padding:0;
+  height: 700px;
+  text-align: left !important;
 }
 .infotext
 {
@@ -23,7 +23,7 @@ a
 .cl
 {
     clear: both;
-	height:50px;
+    height:50px;
 }
 /* menu and logo div */
 .header
@@ -39,26 +39,26 @@ a
 {
     height: 100px;
     float: left;
-    }
- .logo:hover {cursor:pointer;}
+}
+.logo:hover {cursor:pointer;}
 /* menu section */
 .navigation
 {
-	float:right;
+    float:right;
     margin-left:30px;
-	float:left;
+    float:left;
     position: relative;
     height: 100px;
-   /* border-radius: 50px 50px 0px 0px;  background:  url('images/bg_header.png') repeat-x scroll; 	behavior: url(ie-css3.htc);*/
+    /* border-radius: 50px 50px 0px 0px;  background:  url('images/bg_header.png') repeat-x scroll; 	behavior: url(ie-css3.htc);*/
 }
 .menu
 {
-	box-shadow: 1px 1px 6px #000;
+    box-shadow: 1px 1px 6px #000;
     position: relative;
     padding-left: 0;
     top: 20px;
     height: 40px;
-   -webkit-padding-start: 0px; /*background: url('images/globalnav.png') repeat-x 0 -41px;*/
+    -webkit-padding-start: 0px; /*background: url('images/globalnav.png') repeat-x 0 -41px;*/
     background: url('images/nav7.png') repeat-x scroll;
     border-radius: 50px 50px 50px 50px; /*box-shadow: 1px 1px 50px #000;*/
 }
@@ -95,7 +95,7 @@ a
 {
     background: none;
     border-radius: 0 50px 50px 0;
-    
+
 }
 #lastmenu:hover
 {
@@ -103,7 +103,7 @@ a
     background: url('images/nav_hover1.png') repeat-x !important;
     margin-left: 0px;
     margin-right: 0px !important;
-    
+
 }
 
 .menu li a
@@ -192,7 +192,7 @@ a
     z-index: 13;
     width: 620px;
     bottom: 10px;
-	left:540px;
+    left:540px;
 }
 
 /* big sliders */
@@ -212,7 +212,7 @@ a
     float: right;
     margin-top: -500px;
     margin-right: 0px;
-	
+
 }
 .leftcontainer a {text-decoration:none !important;color:White;}
 #firstcont
@@ -266,18 +266,18 @@ a
 /* footer containers section  */
 .footer
 {
-	position:relative;
+    position:relative;
     z-index: 100;
     width: 100%;
     background:#000 url('images/nav9.png') repeat-x scroll;
     bottom: 0px !important;
-   	box-shadow: 1px 1px 30px #000;
+    box-shadow: 1px 1px 30px #000;
 }
 .footermenu
 {
     position: relative;
-	top: 16px;
-	
+    top: 16px;
+
 }
 
 .footermenu li
@@ -293,7 +293,7 @@ a
 .footermenu li:hover
 {
     background: url('images/nav_hover1.png') repeat-x;
-	  cursor: pointer;
+    cursor: pointer;
 }
 .footermenu li a
 {
@@ -324,34 +324,114 @@ a
 /* end footer containers section  */
 
 #leftmenu {margin-top:30px;font-family: 'Iceland' , cursive;font-weight:Bold;font-size: 17px;width:auto;height:auto;margin-bottom:10px;}
+
 #leftmenu  li  {box-shadow: 1px 1px 10px #000; margin:0 auto;height:30px;background: url('images/nav8.png')  repeat-x scroll;  border-radius: 50px 50px 50px 50px;margin-bottom:5px;}
+
 #leftmenu  li:hover { margin:0 auto;height:30px; background: url('images/nav_hover2.png') repeat-x scroll; cursor: pointer;  border-radius: 50px 50px 50px 50px;margin-bottom:5px;}
+
 #leftmenu  li  .level1{ margin-top:15px;margin-left:20px;height:30px;background: url('images/nav8.png')  repeat-x scroll;  border-radius: 50px 50px 50px 50px;margin-bottom:5px;}
+
 #leftmenu  li .level1:hover { margin-top:15px;margin-left:20px;height:30px;height:30px; background: url('images/nav_hover2.png') repeat-x scroll; cursor: pointer;  border-radius: 50px 50px 50px 50px;margin-bottom:3px;}
+
 #leftmenu  li  a{margin-top:1px;text-decoration:none;text-align:center;color:#F8F8F8;margin-left:55px;}
+
 #leftmenu  li  a span {position:relative;top:5px;}
+
 button.button span { display:block; height:19px;border-radius: 20px 20px 20px 20px; padding:0 8px; font:bold 12px/19px Arial, Helvetica, sans-serif; text-align:center; white-space:nowrap; color:#fff; }
+
 button.button span span:hover{color:#A8A8A8;}
+
 .block .block-title { background:url(images/block-head.png) 0 0 repeat-x #000; border-bottom:1px solid #ddd;border-radius:10px 0 0 0; padding:2px 9px; }
+
 #leftmenu  li.level0  ul.level0  {margin-top:25px;margin-bottom:300px;}
+
 .block-subscribe {top: 250px;position: relative;border:1px Solid #A8A8A8;}
+
 ul.level0  li.level1 a {margin-left:25px !important;}
+
 .block-cart {border:1px Solid #A8A8A8;}
+
 .product-colections {display:block;margin:5px 5px 35px 5px ;border:1px Solid #A8A8A8;height:150px;border-radius:10px;overflow:hidden;box-shadow:3px 3px 5px #000000; }
+
 .product-colections a{text-decoration:none;color:#000;text-align:center;}
+
 #products_slider  { overflow: hidden;}
+
 #ColectionsImage {margin-left:50px;margin-bottom:20px;width:472px;height:320px;border:1px Solid #A8A8A8;overflow: hidden;border-radius: 10px;box-shadow: 3px 3px 5px #000;}
+
 #ColectionsImage  img {width:472px;height:320px;}
-#products_slider  #slider_container div{background-color:white;}
-#myaccountmain {width:780px;}
+
+#products_slider  #slider_container div{
+    background-color:white;
+}
+
+#myaccountmain {
+    width:780px;
+}
+
 .dashboard{background-color:#fff;border-radius: 10px 10px 10px 10px;box-shadow: 0px 0px 8px #000;}
+
 .hello {}
+
 .dashcontent {margin:20px;float:none !important;}
-.dashcontent .col2-set .col-1 {float:none !important;width:auto !important;padding-bottom:15px;}
+
+.dashcontent .col2-set .col-1 {
+    float:none !important;
+    width:auto !important;
+    padding-bottom:15px;
+}
+
 .dashcontent .col2-set  .col-2 {margin-left:0 !important;width:auto !important;}
+
 .my-wishlist .title-buttons   h1{text-align:center !important;margin-left:300px;}
+
 #fancybox-overlay {background-color:#000 !important;}
+
 .view-mode .list {color:White;}
+
 .view-mode .list:hover {color:Red;}
+
 .product-image #image {margin-left:100px;}
+
+.imagediv {
+    width :180px;
+    background-color:white;
+    display: block;
+    margin: 5px 5px 35px 5px;
+    border: 1px Solid #A8A8A8;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 3px 3px 5px #000000;
+
+}
+.category {
+    margin-left:100px;
+    float: left;
+}
+
+.imagediv  .title {
+    margin-left:10px;
+    margin-top:5px;
+}
+.bc {
+    margin-left: 100px;
+    color:White;
+    font-size: 25px;
+    text-shadow: 2px 2px #A8A8A8;
+    margin-bottom:50px;
+}
+.bc a{
+    color:White;
+    font-size: 25px;
+    text-decoration: none;
+    text-shadow: 2px 2px #A8A8A8;
+
+}
+.bc a:hover {
+    color:Red;
+    font-size: 25px;
+    font-weight:Bold;
+}
 .shipping {}
