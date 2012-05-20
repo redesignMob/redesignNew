@@ -130,7 +130,7 @@ a
 .bodyContent
 {
     margin: 0 auto;
-    margin-top: 35px;
+    margin-top: 100px;
     width: 1000px;
     height: 500px;
     border-radius: 51px 0px 51px 0px; /*background:  url('images/body.png') repeat-x scroll;}*/
@@ -267,6 +267,7 @@ a
 .footer
 {
     position:relative;
+    margin-bottom: 0px;
     z-index: 100;
     width: 100%;
     background:#000 url('images/nav9.png') repeat-x scroll;
@@ -369,7 +370,10 @@ ul.level0  li.level1 a {margin-left:25px !important;}
     width:780px;
 }
 
-.dashboard{background-color:#fff;border-radius: 10px 10px 10px 10px;box-shadow: 0px 0px 8px #000;}
+.dashboard{
+    background-color:#fff;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 8px #000;}
 
 .hello {}
 
@@ -381,9 +385,15 @@ ul.level0  li.level1 a {margin-left:25px !important;}
     padding-bottom:15px;
 }
 
-.dashcontent .col2-set  .col-2 {margin-left:0 !important;width:auto !important;}
+.dashcontent .col2-set  .col-2 {
+    margin-left:0 !important;
+    width:auto !important;
+}
 
-.my-wishlist .title-buttons   h1{text-align:center !important;margin-left:300px;}
+.my-wishlist .title-buttons   h1{
+    text-align:center !important;
+    margin-left:300px;
+}
 
 #fancybox-overlay {background-color:#000 !important;}
 
@@ -417,10 +427,17 @@ ul.level0  li.level1 a {margin-left:25px !important;}
 }
 .bc {
     margin-left: 100px;
-    color:White;
-    font-size: 25px;
-    text-shadow: 2px 2px #A8A8A8;
+    Color:White;
+    text-shadow: 1px 2px Grey;
+    font-size: 24px;
     margin-bottom:50px;
+    margin-right: 100px;
+}
+.bc h3
+{
+    Color:White !important;
+    text-shadow: 1px 2px Grey;
+    font-size: 24px !important;
 }
 .bc a{
     color:White;
@@ -435,3 +452,94 @@ ul.level0  li.level1 a {margin-left:25px !important;}
     font-weight:Bold;
 }
 .shipping {}
+
+.quickorder_main_categories
+{
+   float: left;
+   position: relative;
+   width: 600px;
+   background-color:White;
+   border-radius:10px;
+   padding: 20px;
+   min-height:500px;
+   box-shadow: 0px 2px 14px Grey;
+}
+.quickorderTitle
+{
+    margin-left:30px;
+    margin-bottom:30px;
+}
+
+.quickorderTitle h3
+{
+    Color:White;
+    text-shadow: 1px 2px Grey;
+    font-size: 24px;
+}
+.quickorderItems
+{
+    min-height: 42px;
+    box-shadow: 2px 2px 2px #A8A8A8;
+    color: white;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 10px;
+    background-image: linear-gradient(bottom, rgb(3,3,3) 7%, rgb(105,105,105) 75%);
+    background-image: -o-linear-gradient(bottom, rgb(3,3,3) 7%, rgb(105,105,105) 75%);
+    background-image: -moz-linear-gradient(bottom, rgb(3,3,3) 7%, rgb(105,105,105) 75%);
+    background-image: -webkit-linear-gradient(bottom, rgb(3,3,3) 7%, rgb(105,105,105) 75%);
+    background-image: -ms-linear-gradient(bottom, rgb(3,3,3) 7%, rgb(105,105,105) 75%);
+    background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.07, rgb(3,3,3)),
+	color-stop(0.75, rgb(105,105,105)));
+
+}
+.quickorderItemsImage
+{   float: left;
+    padding:1px;
+    background-color:white;
+    border-radius:3px;
+    width:42px;
+    box-shadow: 1px 1px 1px #A8A8A8;
+    margin-right:10px;
+}
+.quickorderChildItems
+{
+    min-height: 40px;
+    line-height: 30px;
+    color:white;
+    padding:10px;
+    margin:10px;
+        background-image: linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
+background-image: -o-linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
+background-image: -moz-linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
+background-image: -webkit-linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
+background-image: -ms-linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.46, rgb(112,31,31)),
+	color-stop(0.96, rgb(212,34,46))
+);
+    border-radius:10px;
+    box-shadow: 1px 1px 1px #A8A8A8;
+}
+.quickorderChildItems a img
+{
+    padding-top:5px;
+
+}
+.quickorderChildItemsImage
+{   margin-left:20px;
+    float: left;
+    padding:1px;
+    background-color:white;
+    border-radius:3px;
+    width:30px;
+    box-shadow: 1px 1px 1px #A8A8A8;
+}

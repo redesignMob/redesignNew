@@ -34,22 +34,23 @@ $bcs = $this->getBreadcrumbs();
 			<div class="shadow_right">
 				<div class="shadow_mid"></div>
 			</div>
-		</div>    	
-	</div> 
+		</div>
+	</div>
 	<div class="bc">
-
-<?php 
+            <h3>
+<?php
 
 
 if($this->getCurrentGallery()->getId() > 0)
 	echo '<a href="'.$this->getUrl('gallery').'">Photo Gallery</a>'.' - ';
-	
+
 foreach($bcs as $bc)
 {
 	echo '<a href="'.$this->getViewUrl($bc->getId).'">'.$bc->getTitle().'</a>'.' - ';
 }
 
 echo $this->getGalleryTitle() ?>
-	
+                </h3>
+            <hr/>
 	</div>
 </div>

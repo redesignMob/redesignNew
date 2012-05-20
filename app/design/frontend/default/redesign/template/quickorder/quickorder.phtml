@@ -8,14 +8,24 @@ $categories = $this->getMainCategories();
 ?>
 
 <?php if(count($categories)): ?>
-    <div style="float: left;position: relative;width: 600px;border: 1px solid;padding: 20px" class="quickorder_main_categories">
+<div class="quickorderTitle">
+    <h3>Comanda rapida </h3>
+    <hr/>
+
+</div>
+    <div  class="quickorder_main_categories">
         <?php foreach($categories as $category): ?>
-            <div>
-                <a id="category_link_<?php echo $category->getId() ?>" onclick="getChildrenCategories('<?php echo $category->getId() ?>')" style="cursor:pointer"><img id="img_toggle_<?php echo $category->getId() ?>" src="<?php echo $this->getSkinUrl() ?>images/plus.gif" /></a>
-                <?php echo $category->getName() ?>
+            <div style="margin-bottom: 10px;margin-top: 10px;">
+                 <a style="float:left;" id="category_link_<?php echo $category->getId() ?>" onclick="getChildrenCategories('<?php echo $category->getId() ?>')" style="cursor:pointer"><img id="img_toggle_<?php echo $category->getId() ?>" src="<?php echo $this->getSkinUrl() ?>images/plus.gif" /></a>
+                <h2 style="float:left;margin-left: 10px;"><?php echo $category->getName() ?></h2>
                 <img style="display:none" id="ajax_loader_<?php echo $category->getId() ?>" src="<?php echo $this->getSkinUrl() ?>images/i_ajax_loader.gif" />
             </div>
-            <div style="display:none;margin:20px" id="children_categories_<?php echo $category->getId() ?>"></div>
+                <div style="clear:both;"></div>
+             <hr/>
+            <div style="display:none;margin:20px" id="children_categories_<?php echo $category->getId() ?>">
+            </div>
+
+
         <?php endforeach; ?>
     </div>
 <?php endif; ?>
@@ -28,7 +38,7 @@ $categories = $this->getMainCategories();
 
 <script type="text/javascript">
     var _base_url = '<?php echo $this->getBaseUrl() ?>';
-    
+
     function getChildrenCategories(category_id) {
         $j('#ajax_loader_' + category_id).show();
         $j.ajax({
@@ -42,27 +52,27 @@ $categories = $this->getMainCategories();
             }
         });
     }
-    
+
     function closeCategory(category_id) {
         $j('#children_categories_' + category_id).hide();
         $j('#children_categories_' + category_id).html();
         $j('#img_toggle_' + category_id).attr('src', "<?php echo $this->getSkinUrl() ?>images/plus.gif");
         $j('#category_link_' + category_id).attr('onclick','getChildrenCategories(\'' + category_id + '\')');
     }
-    
+
     function addProductToCart(product_id) {
         $j('#product_ajax_loader_' + product_id).show();
         var add_to_cart_url = _base_url + "quickorder/index/add?product=" + product_id;
         var product_type = $j('#product_type_'+product_id).val();
-        
+
         if(product_type == 'configurable') {
             sel_option = $j("div#product_options_"+product_id+" input[type='radio']:checked").val();
             if(sel_option != undefined) {
                 option_parts = sel_option.split('_');
-                add_to_cart_url += '&qty=1&super_attribute['+option_parts[0]+']='+option_parts[1]; 
+                add_to_cart_url += '&qty=1&super_attribute['+option_parts[0]+']='+option_parts[1];
             }
         }
-        
+
         $j.ajax({
             url: add_to_cart_url,
             success: function(response){

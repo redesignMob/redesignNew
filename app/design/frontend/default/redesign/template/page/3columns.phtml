@@ -36,17 +36,17 @@
 <?php echo $this->getChildHtml('head') ?>
 </head>
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
- <div class="header"> 
+ <div class="header">
     <?php echo $this->getChildHtml('header') ?>
     <div class="logo">
-        <img src="<?php echo $this->getSkinUrl() ?>images/logo4.png" width="400" height="75" />
+          <a href="<?php echo $this->getBaseUrl('') ?>" ><img src="<?php echo $this->getSkinUrl() ?>images/logo.png" width="400" height="100" /><a/>
     </div>
     <div class="navigation">
         <?php echo $this->getChildHtml('mainMenu'); ?>
     </div>
  </div>
 <div style="width:7px;clear:both"></div>
-	
+
 <?php echo $this->getChildHtml('after_body_start') ?>
 <div class="wrapper">
     <?php echo $this->getChildHtml('global_notices') ?>

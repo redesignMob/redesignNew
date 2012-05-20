@@ -9,15 +9,16 @@ $categories = $this->getQuickorderData();
 
 <?php if(count($categories)): ?>
     <?php foreach($categories as $category): ?>
-        <div>
-            <a id="category_link_<?php echo $category->getId() ?>" onclick="getChildrenCategories('<?php echo $category->getId() ?>')" style="cursor:pointer"><img id="img_toggle_<?php echo $category->getId() ?>" src="<?php echo $this->getSkinUrl() ?>images/plus.gif" /></a>
-            <span style="font-style: italic"><?php echo $category->getName() ?></span>
-            <img src="<?php echo $category->getImageUrl() ?>" width="20" height="20" />
+        <div class="quickorderChildItems">
+            <div style="float:left;"><a id="category_link_<?php echo $category->getId() ?>" onclick="getChildrenCategories('<?php echo $category->getId() ?>')" style="cursor:pointer"><img id="img_toggle_<?php echo $category->getId() ?>" src="<?php echo $this->getSkinUrl() ?>images/plus.gif" /></a>
+            <span style="font-style: italic;"><?php echo $category->getName() ?></span>
+            </div>
+            <div class="quickorderChildItemsImage"> <img src="<?php echo $category->getImageUrl() ?>" width="30" height="30" /></div>
             <img style="display:none" id="ajax_loader_<?php echo $category->getId() ?>" src="<?php echo $this->getSkinUrl() ?>images/i_ajax_loader.gif" />
-        </div>
+            </div>
         <div style="display:none;margin:20px" id="children_categories_<?php echo $category->getId() ?>"></div>
     <?php endforeach; ?>
 <?php else: ?>
-    <i>Nu exista rezultate</i>
+     <div class="quickorderChildItems"><i>Nu exista rezultate</i></div>
 <?php endif; ?>
 
