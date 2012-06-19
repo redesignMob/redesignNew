@@ -10,7 +10,7 @@
 <config>
     <modules>
         <Redesign_Material>
-            <version>0.1.0</version>
+            <version>0.2.0</version>
         </Redesign_Material>
     </modules>
     <frontend>

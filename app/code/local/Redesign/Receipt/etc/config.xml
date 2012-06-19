@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Redesign_Receipt>
+            <version>0.1.0</version>
+        </Redesign_Receipt>
+    </modules>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <receipt before="Mage_Adminhtml">Redesign_Receipt</receipt>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <redesigninfo>
+                                            <title>Redesign - All</title>
+                                        </redesigninfo>
+                                        <receipt>
+                                            <title>Receipt</title>
+                                        </receipt>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <global>
+        <blocks>
+            <adminhtml>
+                <rewrite>
+                    <sales_order_invoice_view>Redesign_Receipt_Block_Adminhtml_Sales_Order_Invoice_View</sales_order_invoice_view>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+    </global>
+</config>
