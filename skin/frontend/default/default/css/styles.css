@@ -113,7 +113,7 @@ ul,ol         { list-style:none; }
 .col1-layout .col-main { float:none; width:auto; }
 
 /* 2 Columns Layout */
-.col2-left-layout .col-main { float:right; }
+.col2-left-layout .col-main { float:right;margin-right: 90px; }
 .col2-right-layout .col-main {}
 
 /* 3 Columns Layout */

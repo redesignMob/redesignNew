@@ -370,10 +370,13 @@ ul.level0  li.level1 a {margin-left:25px !important;}
     width:780px;
 }
 
-.dashboard{
+.dashboard
+{
     background-color:#fff;
     border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 0px 8px #000;}
+    box-shadow: 0px 0px 8px #000;
+    width:780px;
+}
 
 .hello {}
 
@@ -412,7 +415,6 @@ ul.level0  li.level1 a {margin-left:25px !important;}
     height: 150px;
     border-radius: 10px;
     overflow: hidden;
-
     box-shadow: 3px 3px 5px #000000;
 
 }
@@ -455,14 +457,14 @@ ul.level0  li.level1 a {margin-left:25px !important;}
 
 .quickorder_main_categories
 {
-   float: left;
-   position: relative;
-   width: 600px;
-   background-color:White;
-   border-radius:10px;
-   padding: 20px;
-   min-height:500px;
-   box-shadow: 0px 2px 14px Grey;
+    float: left;
+    position: relative;
+    width: 600px;
+    background-color:White;
+    border-radius:10px;
+    padding: 20px;
+    min-height:500px;
+    box-shadow: 0px 2px 14px Grey;
 }
 .quickorderTitle
 {
@@ -490,11 +492,11 @@ ul.level0  li.level1 a {margin-left:25px !important;}
     background-image: -webkit-linear-gradient(bottom, rgb(3,3,3) 7%, rgb(105,105,105) 75%);
     background-image: -ms-linear-gradient(bottom, rgb(3,3,3) 7%, rgb(105,105,105) 75%);
     background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.07, rgb(3,3,3)),
-	color-stop(0.75, rgb(105,105,105)));
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.07, rgb(3,3,3)),
+        color-stop(0.75, rgb(105,105,105)));
 
 }
 .quickorderItemsImage
@@ -513,19 +515,19 @@ ul.level0  li.level1 a {margin-left:25px !important;}
     color:white;
     padding:10px;
     margin:10px;
-        background-image: linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
-background-image: -o-linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
-background-image: -moz-linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
-background-image: -webkit-linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
-background-image: -ms-linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
+    background-image: linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
+    background-image: -o-linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
+    background-image: -moz-linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
+    background-image: -webkit-linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
+    background-image: -ms-linear-gradient(bottom, rgb(112,31,31) 46%, rgb(212,34,46) 96%);
 
-background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.46, rgb(112,31,31)),
-	color-stop(0.96, rgb(212,34,46))
-);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.46, rgb(112,31,31)),
+        color-stop(0.96, rgb(212,34,46))
+        );
     border-radius:10px;
     box-shadow: 1px 1px 1px #A8A8A8;
 }
